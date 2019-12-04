@@ -7,7 +7,7 @@ Package license: GPL-3
 
 Feedstock license: BSD 3-Clause
 
-Summary: An implementation of the Uniform Manifold Approximation and  Projection dimensionality reduction by McInnes et al. (2018)  <arXiv:1802.03426>. It also provides means to transform new data and to  carry out supervised dimensionality reduction. An implementation of the  related LargeVis method of Tang et al. (2016) <arXiv:1602.00370> is also  provided. This is a complete re-implementation in R (and C++, via the 'Rcpp' package): no Python installation is required. See the uwot website  (<https://github.com/jlmelville/uwot>) for more documentation and examples.
+Summary: An implementation of the Uniform Manifold Approximation and Projection dimensionality reduction by McInnes et al. (2018) <arXiv:1802.03426>. It also provides means to transform new data and to carry out supervised dimensionality reduction. An implementation of the related LargeVis method of Tang et al. (2016) <arXiv:1602.00370> is also provided. This is a complete re-implementation in R (and C++, via the 'Rcpp' package): no Python installation is required. See the uwot website (<https://github.com/jlmelville/uwot>) for more documentation and examples.
 
 
 
