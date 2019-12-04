@@ -7,7 +7,7 @@ Package license: GPL-3
 
 Feedstock license: BSD 3-Clause
 
-Summary: An implementation of the Uniform Manifold Approximation and  Projection dimensionality reduction by McInnes et al. (2018)  <arXiv:1802.03426>. It also provides means to transform new data and to  carry out supervised dimensionality reduction. An implementation of the  related LargeVis method of Tang et al. (2016) <arXiv:1602.00370> is also  provided. This is a complete re-implementation in R (and C++, via the 'Rcpp' package): no Python installation is required. See the uwot website  (<https://github.com/jlmelville/uwot>) for more documentation and examples.
+Summary: An implementation of the Uniform Manifold Approximation and Projection dimensionality reduction by McInnes et al. (2018) <arXiv:1802.03426>. It also provides means to transform new data and to carry out supervised dimensionality reduction. An implementation of the related LargeVis method of Tang et al. (2016) <arXiv:1602.00370> is also provided. This is a complete re-implementation in R (and C++, via the 'Rcpp' package): no Python installation is required. See the uwot website (<https://github.com/jlmelville/uwot>) for more documentation and examples.
 
 
 
@@ -127,7 +127,7 @@ A feedstock is made up of a conda recipe (the instructions on what and how to bu
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.org/) it is possible to build and upload installable
+and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
 packages to the [conda-forge](https://anaconda.org/conda-forge)
 [Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
 
