@@ -3,7 +3,7 @@ About r-uwot
 
 Home: https://github.com/jlmelville/uwot
 
-Package license: GPL-3
+Package license: GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-uwot-feedstock/blob/master/LICENSE.txt)
 
