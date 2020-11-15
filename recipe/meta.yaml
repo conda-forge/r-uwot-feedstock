@@ -1,4 +1,4 @@
-{% set version = "0.1.8" %}
+{% set version = "0.1.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/uwot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/uwot/uwot_{{ version }}.tar.gz
-  sha256: ede6e061b43f9e1337c0132a5334082f4565ec1623bbb0eee1f738034346f0cb
+  sha256: 1e56d3ba0086256d337e811fdda1be83e56239032a1d512c32cd77ba598e1bc7
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -61,11 +61,9 @@ test:
 
 about:
   home: https://github.com/jlmelville/uwot
-  license: GPL-3
-  summary: "An implementation of the Uniform Manifold Approximation and Projection dimensionality reduction by McInnes et al. (2018) <arXiv:1802.03426>. It also provides\
-    \ means to transform new data and to carry out supervised dimensionality reduction. An implementation of the related LargeVis method of Tang et al. (2016) <arXiv:1602.00370>\
-    \ is also provided. This is a complete re-implementation in R (and C++, via the 'Rcpp' package): no Python installation is required. See the uwot website (<https://github.com/jlmelville/uwot>)\
-    \ for more documentation and examples."
+  license: GPL-3.0-or-later
+  summary: "An implementation of the Uniform Manifold Approximation and Projection dimensionality reduction by McInnes et al. (2018) <arXiv:1802.03426>. It also provides means to transform new data and to carry out supervised dimensionality reduction. An implementation of the related LargeVis method of Tang et al. (2016)\
+    \ <arXiv:1602.00370> is also provided. This is a complete re-implementation in R (and C++, via the 'Rcpp' package): no Python installation is required. See the uwot website (<https://github.com/jlmelville/uwot>) for more documentation and examples."
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
