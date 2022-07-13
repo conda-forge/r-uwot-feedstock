@@ -21,6 +21,16 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-fnn                      # [build_platform != target_platform]
+    - r-rcppprogress             # [build_platform != target_platform]
+    - r-rspectra                 # [build_platform != target_platform]
+    - r-dqrng                    # [build_platform != target_platform]
+    - r-rcpp                     # [build_platform != target_platform]
+    - r-matrix                   # [build_platform != target_platform]
+    - r-rcppparallel             # [build_platform != target_platform]
+    - r-irlba                    # [build_platform != target_platform]
+    - r-rcppannoy                # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
