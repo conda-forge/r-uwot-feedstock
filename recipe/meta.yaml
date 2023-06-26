@@ -1,4 +1,4 @@
-{% set version = "0.1.14" %}
+{% set version = "0.1.15" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/uwot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/uwot/uwot_{{ version }}.tar.gz
-  sha256: 8016e8192b7e72604ca71840cbe43fa1d2caed8a8ad7cbf20e85cd3b384a9fe0
+  sha256: b367f976febd30554fb730ef1ce43759e98a8c8e76b446be61acb6fd9bcb0b4e
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -24,11 +24,9 @@ requirements:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
     - r-fnn                      # [build_platform != target_platform]
     - r-rcppprogress             # [build_platform != target_platform]
-    - r-rspectra                 # [build_platform != target_platform]
     - r-dqrng                    # [build_platform != target_platform]
     - r-rcpp                     # [build_platform != target_platform]
     - r-matrix                   # [build_platform != target_platform]
-    - r-rcppparallel             # [build_platform != target_platform]
     - r-irlba                    # [build_platform != target_platform]
     - r-rcppannoy                # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
@@ -44,10 +42,8 @@ requirements:
     - r-base
     - r-fnn
     - r-matrix
-    - r-rspectra
     - r-rcpp
-    - r-rcppannoy >=0.0.11
-    - r-rcppparallel
+    - r-rcppannoy >=0.0.17
     - r-rcppprogress
     - r-dqrng
     - r-irlba
@@ -56,10 +52,8 @@ requirements:
     - {{ native }}gcc-libs         # [win]
     - r-fnn
     - r-matrix
-    - r-rspectra
     - r-rcpp
-    - r-rcppannoy >=0.0.11
-    - r-rcppparallel
+    - r-rcppannoy >=0.0.17
     - r-rcppprogress
     - r-dqrng
     - r-irlba
@@ -72,8 +66,8 @@ test:
 about:
   home: https://github.com/jlmelville/uwot
   license: GPL-3.0-or-later
-  summary: "An implementation of the Uniform Manifold Approximation and Projection dimensionality reduction by McInnes et al. (2018) <arXiv:1802.03426>. It also provides means to transform new data and to carry out supervised dimensionality reduction. An implementation of the related LargeVis method of Tang et al. (2016)\
-    \ <arXiv:1602.00370> is also provided. This is a complete re-implementation in R (and C++, via the 'Rcpp' package): no Python installation is required. See the uwot website (<https://github.com/jlmelville/uwot>) for more documentation and examples."
+  summary: "An implementation of the Uniform Manifold Approximation and Projection dimensionality reduction by McInnes et al. (2018) <arXiv:1802.03426>. It also provides means to transform new data and to carry out supervised dimensionality reduction. An implementation of the related LargeVis method of Tang et al. (2016)
+    <arXiv:1602.00370> is also provided. This is a complete re-implementation in R (and C++, via the 'Rcpp' package): no Python installation is required. See the uwot website (<https://github.com/jlmelville/uwot>) for more documentation and examples."
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
