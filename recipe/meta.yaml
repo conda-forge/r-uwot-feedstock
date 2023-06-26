@@ -24,11 +24,9 @@ requirements:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
     - r-fnn                      # [build_platform != target_platform]
     - r-rcppprogress             # [build_platform != target_platform]
-    - r-rspectra                 # [build_platform != target_platform]
     - r-dqrng                    # [build_platform != target_platform]
     - r-rcpp                     # [build_platform != target_platform]
     - r-matrix                   # [build_platform != target_platform]
-    - r-rcppparallel             # [build_platform != target_platform]
     - r-irlba                    # [build_platform != target_platform]
     - r-rcppannoy                # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
@@ -44,10 +42,8 @@ requirements:
     - r-base
     - r-fnn
     - r-matrix
-    - r-rspectra
     - r-rcpp
-    - r-rcppannoy >=0.0.11
-    - r-rcppparallel
+    - r-rcppannoy >=0.0.17
     - r-rcppprogress
     - r-dqrng
     - r-irlba
@@ -56,10 +52,8 @@ requirements:
     - {{ native }}gcc-libs         # [win]
     - r-fnn
     - r-matrix
-    - r-rspectra
     - r-rcpp
-    - r-rcppannoy >=0.0.11
-    - r-rcppparallel
+    - r-rcppannoy >=0.0.17
     - r-rcppprogress
     - r-dqrng
     - r-irlba
