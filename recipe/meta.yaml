@@ -1,4 +1,4 @@
-{% set version = "0.1.16" %}
+{% set version = "0.2.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/uwot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/uwot/uwot_{{ version }}.tar.gz
-  sha256: 5f63a0d9edddb08435477af52724cb588c787c8d543c68c9358ed7b1ec3e8e48
+  sha256: 6cdf2784d53d2de74aba92b82f8a41b27b6bcf98e549c31e88006352fb0ce2bd
 
 build:
   merge_build_host: true  # [win]
