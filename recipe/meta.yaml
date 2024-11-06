@@ -1,4 +1,4 @@
-{% set version = "0.1.16" %}
+{% set version = "0.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/uwot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/uwot/uwot_{{ version }}.tar.gz
-  sha256: 5f63a0d9edddb08435477af52724cb588c787c8d543c68c9358ed7b1ec3e8e48
+  sha256: d9938c43d29530d4b36d1b2649cc679b09945a740db2cd3a266242b1aa9a6cd1
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
