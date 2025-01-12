@@ -16,17 +16,22 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
     - r-fnn                      # [build_platform != target_platform]
+    - r-matrix                   # [build_platform != target_platform]
+    - r-rspectra                 # [build_platform != target_platform]
+    - r-rcpp                     # [build_platform != target_platform]
+    - r-rcppannoy                # [build_platform != target_platform]    
     - r-rcppprogress             # [build_platform != target_platform]
     - r-dqrng                    # [build_platform != target_platform]
-    - r-rcpp                     # [build_platform != target_platform]
-    - r-matrix                   # [build_platform != target_platform]
     - r-irlba                    # [build_platform != target_platform]
-    - r-rcppannoy                # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
@@ -42,6 +47,7 @@ requirements:
     - r-base
     - r-fnn
     - r-matrix
+    - r-rspectra
     - r-rcpp
     - r-rcppannoy >=0.0.17
     - r-rcppprogress
@@ -51,6 +57,7 @@ requirements:
     - r-base
     - r-fnn
     - r-matrix
+    - r-rspectra
     - r-rcpp
     - r-rcppannoy >=0.0.17
     - r-rcppprogress
