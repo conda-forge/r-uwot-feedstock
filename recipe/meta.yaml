@@ -1,4 +1,4 @@
-{% set version = "0.1.16" %}
+{% set version = "0.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,24 +9,29 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/uwot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/uwot/uwot_{{ version }}.tar.gz
-  sha256: 5f63a0d9edddb08435477af52724cb588c787c8d543c68c9358ed7b1ec3e8e48
+  sha256: d9938c43d29530d4b36d1b2649cc679b09945a740db2cd3a266242b1aa9a6cd1
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
     - r-fnn                      # [build_platform != target_platform]
+    - r-matrix                   # [build_platform != target_platform]
+    - r-rspectra                 # [build_platform != target_platform]
+    - r-rcpp                     # [build_platform != target_platform]
+    - r-rcppannoy                # [build_platform != target_platform]    
     - r-rcppprogress             # [build_platform != target_platform]
     - r-dqrng                    # [build_platform != target_platform]
-    - r-rcpp                     # [build_platform != target_platform]
-    - r-matrix                   # [build_platform != target_platform]
     - r-irlba                    # [build_platform != target_platform]
-    - r-rcppannoy                # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
@@ -42,6 +47,7 @@ requirements:
     - r-base
     - r-fnn
     - r-matrix
+    - r-rspectra
     - r-rcpp
     - r-rcppannoy >=0.0.17
     - r-rcppprogress
@@ -51,6 +57,7 @@ requirements:
     - r-base
     - r-fnn
     - r-matrix
+    - r-rspectra
     - r-rcpp
     - r-rcppannoy >=0.0.17
     - r-rcppprogress
